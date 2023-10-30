@@ -35,9 +35,22 @@ jobs:
     - name: Build package
       run: npm run build  # Replace with your build command
 
+    - name: Set package.json name to wizarr-vue-modal
+      run: |
+        sed -i 's/"name": ".*"/"name": "wizarr-vue-modal"/' package.json
+    
+    - name: Publish to NPM
+      run: |
+        echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+        npm publish --access public
+
+    - name: Set package.json name to @wizarrrr/wizarr-vue-modal
+      run: |
+        sed -i 's/"name": ".*"/"name": "@wizarrrr\/wizarr-vue-modal"/' package.json
+
     - name: Publish to GitHub Packages
       run: |
-        echo "@wizarrrr:registry=https://npm.pkg.github.com" >> .npmrc
+        echo "//npm.pkg.github.com/:__authToken={{ secrets.GITHUB_TOKEN }}" > .npmrc
         npm publish --access public --registry https://npm.pkg.github.com/wizarrrr
 
     - name: Cleanup
