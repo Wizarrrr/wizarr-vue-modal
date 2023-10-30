@@ -22,7 +22,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        version-type:  'minor'
+        version-type: 'patch'
 
     - name: Setup Node.js
       uses: actions/setup-node@v2
@@ -42,7 +42,7 @@ jobs:
 
     - name: Publish to GitHub Packages
       run: |
-        echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" > .npmrc
+        echo "@wizarrrr:registry=https://npm.pkg.github.com" >> .npmrc
         npm publish --access public --registry https://npm.pkg.github.com/wizarrrr
 
     - name: Cleanup
