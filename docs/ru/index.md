@@ -1,11 +1,11 @@
 ---
 layout: home
 
-title: JenesiusVueModal
-titleTemplate: Jenesius Vue Modal & Простая Модальная Система для VueJS
+title: WizarrVueModal
+titleTemplate: Wizarr Vue Modal & Простая Модальная Система для VueJS
 
 hero:
-  name: Jenesius VueModal
+  name: Wizarr VueModal
   text: Простая Модальная Система для VueJS
   tagline: Просто, мощно, and быстро.
   actions:
@@ -14,7 +14,7 @@ hero:
       link: ru/guide/getting-started
     - theme: alt
       text: Перейти на GitHub
-      link: https://github.com/jenesius/vue-modal
+      link: https://github.com/wizarrrr/wizarr-vue-modal
 features:
   - title: Лёгкость использования
     icon: 🚀

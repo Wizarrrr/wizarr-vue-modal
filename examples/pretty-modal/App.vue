@@ -2,14 +2,14 @@
 	<div class="container-buttons">
 		<button @click="openModal(ModalProfile)">Person Profile</button>
 		<button ref="refButtonConfirm"
-				@click="openModal(ModalConfirm, { label: 'Do you love modals?', text: textConfirm, resolve: resolveConfirm })">
+			@click="openModal(ModalConfirm, { label: 'Do you love modals?', text: textConfirm, resolve: resolveConfirm })">
 			Confirm
 		</button>
-		<button @click="openModal(ModalAlert, {text: '13'})">Alert</button>
+		<button @click="openModal(ModalAlert, { text: '13' })">Alert</button>
 		<button @click="openModal(ModalAutoContext)">Auto context</button>
 		<button @click="openModal(ModalQuestion)">Question</button>
 	</div>
-	<modal-container/>
+	<modal-container />
 </template>
 
 <script setup lang="ts">
@@ -24,7 +24,7 @@ import ModalInfo from "./modals/modal-info.vue";
 import ModalTitle from "../../tests/components/modal-title.vue";
 
 const refButtonConfirm = ref(null);
-const textAlert = `Jenesius Vue Modal is a lightweight and simple library for working with modal windows in Vue3. It integrates deeply with Vue.js and allows you to create modals of any complexity.`
+const textAlert = `Wizarr Vue Modal is a lightweight and simple library for working with modal windows in Vue3. It integrates deeply with Vue.js and allows you to create modals of any complexity.`
 const textConfirm = `Modal windows allow you to take part of the logic to a separate level, which makes it easier to develop applications.`
 
 function resolveConfirm() {

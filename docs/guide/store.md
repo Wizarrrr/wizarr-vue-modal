@@ -11,7 +11,7 @@ To get started, you need to initialize the storage (save the modal windows we ne
 this is done using the configuration function:
 
 ```ts
-import {config} from "jenesius-vue-modal";
+import {config} from "wizarr-vue-modal";
 import ModalConfirm from "./ModalConfirm";
 
 config({
@@ -31,7 +31,7 @@ Of course, *pushModal* and *promptModal* methods also support this functionality
 If you are writing a library, for better interoperability, a function has been added that checks for the presence of a modal
 windows in storage:
 ```ts
-import {getComponentFromStore} from "jenesius-vue-modal";
+import {getComponentFromStore} from "wizarr-vue-modal";
 getComponentFromStore('alert') // undefined
 getComponentFromStore('confirm') // Component
 ```

@@ -19,7 +19,7 @@ Let's see how it works step by step:
   <button @click="handleClick">Click</button>
 </template>
 <script>
-import {Modal} from "jenesius-vue-modal";
+import {Modal} from "wizarr-vue-modal";
 
 export default {
   data: () => ({

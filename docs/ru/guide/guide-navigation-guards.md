@@ -7,7 +7,7 @@
 Если обработчик возвращает **false** или **выдает ошибку**, закрытие
 модальное окно будет прервано.
 
-Jenesius Vue Modal предоставляет три способа перехвата закрытия:
+Wizarr Vue Modal предоставляет три способа перехвата закрытия:
 
 ## Onclose
 Методы [openModal](./guide-methods#open-modal) and [pushModal](./guide-methods#push-modal)
@@ -15,7 +15,7 @@ Jenesius Vue Modal предоставляет три способа перехв
 вернет объект [modalObject](./modal-object). Чтобы поймать закрытие
 модальное окно, вам нужно добавить событие **onclose** к этому объекту:
 ```ts
-import {openModal} from "jenesius-vue-modal";
+import {openModal} from "wizarr-vue-modal";
 const modal = await openModal(VueComponent);
 
 let count = 5;
@@ -31,7 +31,7 @@ modal.onclose = () => {
 закрыть только те модальные окна, которые были открыты после него.
 
 ```ts
-import {pushModal, closeModal} from "jenesius-vue-modal";
+import {pushModal, closeModal} from "wizarr-vue-modal";
 
 const modal1 = await pushModal(VueComponent);
 const modal2 = await pushModal(VueComponent);
@@ -54,9 +54,9 @@ const Foo = {
 } 
 ```
 ## Composition Api
-Хотя вы по-прежнему можете использовать встроенные функции, Jenesius Vue Modal предоставляет функции для Composition API:
+Хотя вы по-прежнему можете использовать встроенные функции, Wizarr Vue Modal предоставляет функции для Composition API:
 ```ts
-import {onBeforeModalClose} from "jenesius-vue-modal"
+import {onBeforeModalClose} from "wizarr-vue-modal"
 
 export default {
   setup() {

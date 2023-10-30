@@ -9,7 +9,7 @@ So that when closing a modal window using the **vue-router** library, you need t
 hook:
 
 ```ts
-import {getCurrentModal, closeModal} from "jenesius-vue-modal";
+import {getCurrentModal, closeModal} from "wizarr-vue-modal";
 
 const router = new VueRouter({...})
 

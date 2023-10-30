@@ -11,7 +11,7 @@
 это делается с помощью функции конфигурации:
 
 ```ts
-import {config} from "jenesius-vue-modal";
+import {config} from "wizarr-vue-modal";
 import ModalConfirm from "./ModalConfirm";
 
 config({
@@ -29,7 +29,7 @@ openModal('confirm');
 ## Проверка модального окна
 Если вы пишете библиотеку, для лучшей совместимости добавлена функция, проверяющая наличие модального окна в хранилище:
 ```ts
-import {getComponentFromStore} from "jenesius-vue-modal";
+import {getComponentFromStore} from "wizarr-vue-modal";
 getComponentFromStore('alert') // undefined
 getComponentFromStore('confirm') // Component
 ```

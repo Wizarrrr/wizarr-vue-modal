@@ -2,7 +2,7 @@
 
 Sometimes it becomes necessary to link vue-router to show a modal window. To 
 do this, you need to write your own handler for router and integrate it with 
-opening/closing a modal window. One in Jenesius Vue Modal already has it all,
+opening/closing a modal window. One in Wizarr Vue Modal already has it all,
 you just need to connect it.
 
 For example, a table of users was created, on the route **/users**. A modal handler

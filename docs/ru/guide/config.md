@@ -5,7 +5,7 @@
 
 Модальные окна можно настроить, вызвав *config*:
 ```ts
-import {config} from "jenesius-vue-modal";
+import {config} from "wizarr-vue-modal";
 config({
     // Параметры
 })

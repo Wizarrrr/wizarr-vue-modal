@@ -1,11 +1,11 @@
 # Приступим к работе
-Jenesius Vue Modal — легкая и простая библиотека для работы с модальными окнами в Vue.js версии **3+**. Она глубоко 
+Wizarr Vue Modal — легкая и простая библиотека для работы с модальными окнами в Vue.js версии **3+**. Она глубоко 
 интегрируется с Vue.js и позволяет создавать модальные окна любой сложности.
 
 ## Установка
 Для установки пакета рекомендуется использовать Npm.
 ```shell
-npm i jenesius-vue-modal
+npm i wizarr-vue-modal
 ```
 
 ## Подключение к странице
@@ -17,7 +17,7 @@ npm i jenesius-vue-modal
     <widget-container-modal />
 </template>
 <script>
-    import {container} from "jenesius-vue-modal";
+    import {container} from "wizarr-vue-modal";
 
     export default {
         components: {WidgetContainerModal: container},

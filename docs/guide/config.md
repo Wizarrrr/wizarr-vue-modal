@@ -5,7 +5,7 @@ the name is animated and more.
 
 Modal windows can be configured by calling *config*:
 ```ts
-import {config} from "jenesius-vue-modal";
+import {config} from "wizarr-vue-modal";
 config({
     // Params
 })

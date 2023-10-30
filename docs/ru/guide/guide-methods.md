@@ -9,7 +9,7 @@
 - **props** — объект, содержащий входные параметры, которые передаются в модальное окно и будут доступны из `props`.
 
 ```ts
-import {openModal} from "jenesius-vue-modal";
+import {openModal} from "wizarr-vue-modal";
 import VueComponent from "AnyVueComponent.vue";
 
 const props = {title: "Hello"};
@@ -44,7 +44,7 @@ const modal = await openModal(VueComponent);
 
 - **props** — объект, содержащий входные параметры, которые передаются в модальное окно и будут доступны из `props`.
 ```ts
-import {pushModal} from "jenesius-vue-modal"
+import {pushModal} from "wizarr-vue-modal"
 pushModal(VueComponent)
 ```
 ```vue
@@ -52,7 +52,7 @@ pushModal(VueComponent)
     <button @click = "add">Добавить следующее</button>
 </template>
 <script setup>
-    import {pushModal} from "jenesius-vue-modal";
+    import {pushModal} from "wizarr-vue-modal";
     import ModalSecond from "ModalSecond.vue";
     
 	function add() {
@@ -65,7 +65,7 @@ pushModal(VueComponent)
     <button @click = "pushModal">Push first</button>
 </template>
 <script>
-    import {pushModal} from "jenesius-vue-modal";
+    import {pushModal} from "wizarr-vue-modal";
     import ModalFirst from "ModalFirst";
     export default {
         setup: () => ({pushModal: () => pushModal(ModalFirst)}),
@@ -83,7 +83,7 @@ To close only the last window, you need to use the [popModal](#pop-modal) method
 ## Close Modal
 To close **all** modals, use the closeModal method:
 ```ts
-import {closeModal} from "jenesius-vue-modal"
+import {closeModal} from "wizarr-vue-modal"
 closeModal()
 ```
 
@@ -91,7 +91,7 @@ closeModal()
 To close **only the last** modal window, if several were opened 
 using the pushModal method, use the popModal method:
 ```ts
-import {popModal} from "jenesius-vue-modal"
+import {popModal} from "wizarr-vue-modal"
 popModal()
 ```
 
@@ -102,7 +102,7 @@ The *prompt-modal* method is a synonym for pushModal, but increases the eavesdro
 for **Modal.EVENT_PROMPT** upon execution of which the modal window will be closed and the data will be transferred
 with the event will be the execution of *promptModal*:
 ```ts
-import {promptModal} from "jenesius-vue-modal"
+import {promptModal} from "wizarr-vue-modal"
 const code = await promptModal(ModalCode);
 ```
 File *ModalCode.vue*
@@ -112,7 +112,7 @@ File *ModalCode.vue*
   <button @click="handleClick">Click</button>
 </template>
 <script>
-import {Modal} from "jenesius-vue-modal";
+import {Modal} from "wizarr-vue-modal";
 
 export default {
   methods: {

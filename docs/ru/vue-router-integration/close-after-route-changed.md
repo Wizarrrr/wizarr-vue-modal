@@ -8,7 +8,7 @@
 Для закрытия модального окна с помощью библиотеки **vue-router** нужно прописать следующий хук:
 
 ```ts
-import {getCurrentModal, closeModal} from "jenesius-vue-modal";
+import {getCurrentModal, closeModal} from "wizarr-vue-modal";
 
 const router = new VueRouter({...})
 

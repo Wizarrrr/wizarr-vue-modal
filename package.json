@@ -1,9 +1,7 @@
 {
-  "name": "jenesius-vue-modal",
+  "name": "wizarr-vue-modal",
   "version": "1.9.2",
   "private": false,
-  "description": "Simple modal plugin for Vue3",
-  "author": "Jenesius",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vite build --config vite.config.mjs",
@@ -14,8 +12,8 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
-  "main": "dist/jenesius-vue-modal.cjs.js",
-  "module": "dist/jenesius-vue-modal.es.js",
+  "main": "dist/wizarr-vue-modal.cjs.js",
+  "module": "dist/wizarr-vue-modal.es.js",
   "files": [
     "README.MD",
     "dist",
@@ -61,8 +59,7 @@
     "last 2 versions",
     "not dead"
   ],
-  "email": "lokargenia@gmail.com",
-  "homepage": "https://modal.jenesius.com",
+  "homepage": "https://modal.wizarr.dev",
   "keywords": [
     "vue",
     "vue3",
@@ -72,7 +69,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jenesius/vue-modal.git"
+    "url": "https://github.com/wizarrrr/wizarr-vue-modal.git"
   },
-  "url": "https://github.com/Jenesius/vue-modal/issues"
+  "url": "https://github.com/wizarrrr/wizarr-vue-modal/issues"
 }

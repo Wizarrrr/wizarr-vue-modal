@@ -4,7 +4,7 @@
 анимации, вам нужно указать новые в конфигурации:
 
 ```ts
-import {config} from "jenesius-vue-modal";
+import {config} from "wizarr-vue-modal";
 
 config({
     animation: "fade" // Любая другая

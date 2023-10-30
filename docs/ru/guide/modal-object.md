@@ -13,7 +13,7 @@
 - **closed** - `computed` переменная. Имеет значение **true**, если модальное окно открыто.
 
 ```ts
-import {openModal} from "jenesius-vue-modal";
+import {openModal} from "wizarr-vue-modal";
 const modal = await openModal(Modal, {
     message: "Welcome"
 });

@@ -8,7 +8,7 @@ modal until they have entered input, or to send a request to the server.
 If the handler returns **false** or **throws an error** , closing 
 the modal window will be interrupted.
 
-Jenesius Vue Modal provides three ways to catch closures:
+Wizarr Vue Modal provides three ways to catch closures:
 
 ## Onclose
 The [openModal](/guide/guide-methods#open-modal) and [pushModal](/guide/guide-methods#push-modal)
@@ -16,7 +16,7 @@ methods return Promise, which, if successful,
 will return the [modalObject](/guide/modal-object) object. In order to catch the closing of
 a modal window, you need to add an event **onclose** to this object:
 ```ts
-import {openModal} from "jenesius-vue-modal";
+import {openModal} from "wizarr-vue-modal";
 const modal = await openModal(VueComponent);
 
 let count = 5;
@@ -29,7 +29,7 @@ modal.onclose = () => {
 EXAMPLE
 If several modal windows are open, and one of them will have an onclose handler that returns false, you can close only those modal windows that were opened after it.
 ```ts
-import {pushModal, closeModal} from "jenesius-vue-modal";
+import {pushModal, closeModal} from "wizarr-vue-modal";
 
 const modal1 = await pushModal(VueComponent);
 const modal2 = await pushModal(VueComponent);
@@ -52,9 +52,9 @@ const Foo = {
 } 
 ```
 ## Composition Api
-While you can still use built-in functions, Jenesius Vue Modal provides functions for the Composition API:
+While you can still use built-in functions, Wizarr Vue Modal provides functions for the Composition API:
 ```ts
-import {onBeforeModalClose} from "jenesius-vue-modal"
+import {onBeforeModalClose} from "wizarr-vue-modal"
 
 export default {
   setup() {

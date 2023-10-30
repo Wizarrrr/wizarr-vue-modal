@@ -2,70 +2,92 @@
  * last change: 25.11.2021
  * */
 
-export default class ModalError extends Error{
-    readonly isModalError:boolean = true;
-    details:any
+export default class ModalError extends Error {
+  readonly isModalError: boolean = true;
+  details: any;
 
-    constructor(message: string, details: any = null) {
-        super();
+  constructor(message: string, details: any = null) {
+    super();
 
-        this.message = message;
-        this.details = details;
-    }
+    this.message = message;
+    this.details = details;
+  }
 
-    static Undefined(id:number) {
-        return new ModalError(`Modal with id: ${id} not founded. The modal window may have been closed earlier.`);
-    }
-    static UndefinedGuardName(name:string) {
-        return new ModalError(`Guard's name ${name} is not declaration.`);
-    }
+  static Undefined(id: number) {
+    return new ModalError(
+      `Modal with id: ${id} not founded. The modal window may have been closed earlier.`
+    );
+  }
+  static UndefinedGuardName(name: string) {
+    return new ModalError(`Guard's name ${name} is not declaration.`);
+  }
 
-    static NextReject(id:number){
-        return new ModalError(`Guard returned false. Modal navigation was stopped. Modal id ${id}`);
-    }
+  static NextReject(id: number) {
+    return new ModalError(
+      `Guard returned false. Modal navigation was stopped. Modal id ${id}`
+    );
+  }
 
-    static GuardDeclarationType(func:Function){
-        return new ModalError("Guard's type should be a function. Provided:", func);
-    }
+  static GuardDeclarationType(func: Function) {
+    return new ModalError("Guard's type should be a function. Provided:", func);
+  }
 
-    static ConfigurationType(config:object) {
-        return new ModalError("Configuration type must be an Object. Provided", config)
-    }
-    static ConfigurationUndefinedParam(param:string, availableParams:Array<string>) {
-        return new ModalError(`In configuration founded unknown parameter: ${param}. Available are ${availableParams.join(", ")} `)
-    }
+  static ConfigurationType(config: object) {
+    return new ModalError(
+      "Configuration type must be an Object. Provided",
+      config
+    );
+  }
+  static ConfigurationUndefinedParam(
+    param: string,
+    availableParams: Array<string>
+  ) {
+    return new ModalError(
+      `In configuration founded unknown parameter: ${param}. Available are ${availableParams.join(
+        ", "
+      )} `
+    );
+  }
 
-    static QueueNoEmpty(){
-        return new ModalError("Modal's queue is not empty. Probably some modal reject closing by onClose hook.")
-    }
-    static EmptyModalQueue(){
-        return new ModalError("Modal queue is empty.");
-    }
+  static QueueNoEmpty() {
+    return new ModalError(
+      "Modal's queue is not empty. Probably some modal reject closing by onClose hook."
+    );
+  }
+  static EmptyModalQueue() {
+    return new ModalError("Modal queue is empty.");
+  }
 
-    static NotInitialized(){
-        return new ModalError("Modal Container not found. Put container from jenesius-vue-modal in App's template. Check documentation for more information https://modal.jenesius.com/docs.html/installation#getting-started.");
-    }
+  static NotInitialized() {
+    return new ModalError(
+      "Modal Container not found. Put container from wizarr-vue-modal in App's template. Check documentation for more information https://modal.wizarr.dev/docs.html/installation#getting-started."
+    );
+  }
 
-    static ModalComponentNotProvided(){
-        return new ModalError("The first parameter(VueComponent) was not specified.");
-    }
+  static ModalComponentNotProvided() {
+    return new ModalError(
+      "The first parameter(VueComponent) was not specified."
+    );
+  }
 
-    static DuplicatedRouterIntegration(){
-        return new ModalError('useModalRouter.init should escaped only once.')
-    }
+  static DuplicatedRouterIntegration() {
+    return new ModalError("useModalRouter.init should escaped only once.");
+  }
 
-    static ModalRouterIntegrationNotInitialized(){
-        return new ModalError("The integration was not initialized. Please, use useModalRouter.init(router). For more information: https://modal.jenesius.com/docs.html/integration-vue-router#installation")
-    }
+  static ModalRouterIntegrationNotInitialized() {
+    return new ModalError(
+      "The integration was not initialized. Please, use useModalRouter.init(router). For more information: https://modal.wizarr.dev/docs.html/integration-vue-router#installation"
+    );
+  }
 
-    static ModalEventNameMustBeString(eventName: string) {
-        return new ModalError(
-            `Event name must be a string. Provided: ${eventName}`
-        )
-    }
-    static ModalNotExistsInStore(modalName: string) {
-        return new ModalError(
-            `Provided name(${modalName}) don't exist in the store. Has the given name been added to the store?`
-        )
-    }
+  static ModalEventNameMustBeString(eventName: string) {
+    return new ModalError(
+      `Event name must be a string. Provided: ${eventName}`
+    );
+  }
+  static ModalNotExistsInStore(modalName: string) {
+    return new ModalError(
+      `Provided name(${modalName}) don't exist in the store. Has the given name been added to the store?`
+    );
+  }
 }

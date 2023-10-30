@@ -19,7 +19,7 @@
   <button @click="handleClick">Click</button>
 </template>
 <script>
-import {Modal} from "jenesius-vue-modal";
+import {Modal} from "wizarr-vue-modal";
 
 export default {
   methods: {
@@ -35,7 +35,7 @@ export default {
 
 Как использовать:
 ```ts
-import {promptModal} from "jenesius-vue-modal"
+import {promptModal} from "wizarr-vue-modal"
 const code = await promptModal(ModalCode);
 ```
 What happened in this example:

@@ -1,10 +1,10 @@
 # Установка
 
-- Не забудьте [проинициализировать](./getting-started) Jenesius Vue Modal
+- Не забудьте [проинициализировать](./getting-started) Wizarr Vue Modal
 - При создании роутера добавьте модальную интеграцию:
 ```ts
 import { createWebHistory, createRouter} from "vue-router";
-import {useModalRouter} from "jenesius-vue-modal";
+import {useModalRouter} from "wizarr-vue-modal";
 
 const routes = [...];
 const router = createRouter({

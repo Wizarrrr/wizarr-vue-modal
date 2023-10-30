@@ -10,7 +10,7 @@
 конфигурационный файл для vue-router:
 ```ts
 import {createRouter, createWebHashHistory} from "vue-router"
-import {useModalRouter} from "jenesius-vue-modal";
+import {useModalRouter} from "wizarr-vue-modal";
 import Modal from "./any-modal.vue";
 
 const routes = [

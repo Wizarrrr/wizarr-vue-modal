@@ -1,27 +1,27 @@
-<p align="center"><a href="https://modal.jenesius.com/" target="_blank" rel="noopener noreferrer"><img height="100" src="https://modal.jenesius.com/images/logo.svg" alt="Vue logo"></a></p>
+<p align="center"><a href="https://modal.wizarr.dev/" target="_blank" rel="noopener noreferrer"><img height="100" src="https://modal.wizarr.dev/images/logo.svg" alt="Vue logo"></a></p>
 
 <p align="center">
-  <a href="https://img.shields.io/github/issues/Jenesius/vue-modal"><img src="https://img.shields.io/github/issues/Jenesius/vue-modal" alt="Downloads"></a>
-  <a href="https://img.shields.io/npm/dw/jenesius-vue-modal"><img src="https://img.shields.io/npm/dw/jenesius-vue-modal" alt="Downloads"></a>
-  <a href="https://img.shields.io/github/stars/Jenesius/vue-modal"><img src="https://img.shields.io/github/stars/Jenesius/vue-modal" ></a>
-  <a href="https://github.com/Jenesius/vue-modal/actions/workflows/node.js.yml/badge.svg"><img src="https://github.com/Jenesius/vue-modal/actions/workflows/node.js.yml/badge.svg" alt="Issue"></a>
-  <a href="https://img.shields.io/npm/l/jenesius-vue-modal"><img src="https://img.shields.io/npm/l/jenesius-vue-modal" alt="Stars"></a>
+  <a href="https://img.shields.io/github/issues/wizarrrr/wizarr-modal"><img src="https://img.shields.io/github/issues/wizarrrr/wizarr-modal" alt="Downloads"></a>
+  <a href="https://img.shields.io/npm/dw/wizarr-vue-modal"><img src="https://img.shields.io/npm/dw/wizarr-vue-modal" alt="Downloads"></a>
+  <a href="https://img.shields.io/github/stars/wizarrrr/wizarr-modal"><img src="https://img.shields.io/github/stars/wizarrrr/wizarr-modal" ></a>
+  <a href="https://github.com/wizarrrr/wizarr-modal/actions/workflows/node.js.yml/badge.svg"><img src="https://github.com/wizarrrr/wizarr-modal/actions/workflows/node.js.yml/badge.svg" alt="Issue"></a>
+  <a href="https://img.shields.io/npm/l/wizarr-vue-modal"><img src="https://img.shields.io/npm/l/wizarr-vue-modal" alt="Stars"></a>
 </p>
 
-# Jenesius Vue Modal
+# Wizarr Vue Modal
 
-Jenesius vue modal is simple modal system library for **Vue 3** only . 
+Wizarr vue modal is simple modal system library for **Vue 3** only . 
 
 
 Using this library, you can simply show both one and several modal windows at the same time, integrate with vue-router
 
-- [Full Documentation](https://modal.jenesius.com)
-- [Examples](https://modal.jenesius.com/examples/list.html)
+- [Full Documentation](https://modal.wizarr.dev)
+- [Examples](https://modal.wizarr.dev/examples/list.html)
 
 ### Installation
 
 ```shell
-npm i jenesius-vue-modal
+npm i wizarr-vue-modal
 ```
 
 ![Alt Text](./demo-gif.gif)
@@ -37,7 +37,7 @@ The main condition for library initialization is adding a **container** inside y
     <widget-container-modal />
 </template>
 <script>
-    import {container} from "jenesius-vue-modal";
+    import {container} from "wizarr-vue-modal";
     
     export default {
         components: {WidgetContainerModal: container},
@@ -54,7 +54,7 @@ Methods `openModal` and `pushModal` used to display modal windows.
 - `pushModal` - display provided component
 
 ```js
-import {openModal} from "jenesius-vue-modal";
+import {openModal} from "wizarr-vue-modal";
 import SomeVueComponent from "SomeVueComponent.vue";
     
 openModal(SomeVueComponent, props);
@@ -62,7 +62,7 @@ openModal(SomeVueComponent, props);
 - props will provide in your component, [example](#example-vuemodalcomponent)
 
 Methods return promise, in this case promise is resolved **modalObject**.
-[More information](https://modal.jenesius.com/guide/modal-object.html)
+[More information](https://modal.wizarr.dev/guide/modal-object.html)
 ```js
 const modal = await openModal(SomeVueComponent);
 // modal {id, close, onclose, closed, instance, on}
@@ -75,17 +75,17 @@ const modal = await openModal(SomeVueComponent);
 - `pushModal` - add one more provided modal.
 - `closeModal`- close all modals.
 - `popModal` - close last opened modal.
-- `promptModal` - opening a modal window and waiting for a value to be returned. [More information](https://modal.jenesius.com/guide/guide-methods.html#prompt-modal)
+- `promptModal` - opening a modal window and waiting for a value to be returned. [More information](https://modal.wizarr.dev/guide/guide-methods.html#prompt-modal)
 
-For detailed information about existing methods, follow the [link](https://modal.jenesius.com/guide/guide-methods.html)
+For detailed information about existing methods, follow the [link](https://modal.wizarr.dev/guide/guide-methods.html)
 
 ```js 
-import {openModal, pushModal, closeModal, popModal} from "jenesius-vue-modal"
+import {openModal, pushModal, closeModal, popModal} from "wizarr-vue-modal"
 ```
 
 ## How to return value?
 
-Sometimes a modal needs to return a value. This case is described in detail in the [following article](https://modal.jenesius.com/guide/guide-returned-value.html).
+Sometimes a modal needs to return a value. This case is described in detail in the [following article](https://modal.wizarr.dev/guide/guide-returned-value.html).
 
 ## Handle events
 
@@ -154,7 +154,7 @@ export default {
 ```
 - Composition style
 ```js
-import {onBeforeModalClose} from "jenesius-vue-modal"
+import {onBeforeModalClose} from "wizarr-vue-modal"
 export default{
     setup() {
         onBeforeModalClose(() => {
@@ -192,7 +192,7 @@ For integrate modals into VueRouter you need to initialize your application:
 
 ```js
 import {createWebHistory, createRouter} from "vue-router";
-import {useModalRouter} from "jenesius-vue-modal";
+import {useModalRouter} from "wizarr-vue-modal";
 
 const router = createRouter({
     history: createWebHistory(), 
@@ -215,10 +215,10 @@ const routes = [
 ```
 
 Now, when route will be */any-route* the Modal window will open.
-For more information see [Docs](https://modal.jenesius.com/guide/integration-introduction.html).
+For more information see [Docs](https://modal.wizarr.dev/guide/integration-introduction.html).
 
 # Style and Animation
-Please refer to the [documentation](https://modal.jenesius.com/guide/details-styles.html) to change the styles or animations of modals.
+Please refer to the [documentation](https://modal.wizarr.dev/guide/details-styles.html) to change the styles or animations of modals.
 
 # Example VueModalComponent
 
@@ -237,7 +237,7 @@ Please refer to the [documentation](https://modal.jenesius.com/guide/details-sty
 ```
 To show this component
 ```js
-import {openModal} from "jenesius-vue-modal"
+import {openModal} from "wizarr-vue-modal"
 import WidgeTestModal from "WidgeTestModal.vue";
 
 openModal(WidgeTestModal, {
@@ -247,4 +247,4 @@ openModal(WidgeTestModal, {
 
 ---
 
-#### Do you like this module? Put a star on [GitHub](https://github.com/Jenesius/vue-modal)
+#### Do you like this module? Put a star on [GitHub](https://github.com/wizarrrr/wizarr-modal)
