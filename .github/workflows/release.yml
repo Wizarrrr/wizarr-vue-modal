@@ -53,7 +53,7 @@ jobs:
 
     - name: Publish to GitHub Packages
       run: |
-        echo "//npm.pkg.github.com/:__authToken={{ secrets.GITHUB_TOKEN }}" > .npmrc
+        echo "@wizarrrr:registry=https://npm.pkg.github.com/" > .npmrc
         npm publish --access public
 
     - name: Cleanup
