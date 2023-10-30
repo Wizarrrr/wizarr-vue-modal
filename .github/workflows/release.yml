@@ -48,6 +48,9 @@ jobs:
       run: |
         sed -i 's/"name": ".*"/"name": "@wizarrrr\/wizarr-vue-modal"/' package.json
 
+    - name: Cleanup
+      run: rm .npmrc
+
     - name: Publish to GitHub Packages
       run: |
         echo "//npm.pkg.github.com/:__authToken={{ secrets.GITHUB_TOKEN }}" > .npmrc
