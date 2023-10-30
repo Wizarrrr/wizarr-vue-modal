@@ -38,11 +38,13 @@ jobs:
     - name: Publish to NPM
       run: |
         echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > .npmrc
+        echo "name=wizarr-vue-modal" >> .npmrc
         npm publish
 
     - name: Publish to GitHub Packages
       run: |
         echo "@wizarrrr:registry=https://npm.pkg.github.com" >> .npmrc
+        echo "name=@wizarrrr/wizarr-vue-modal" >> .npmrc
         npm publish --access public --registry https://npm.pkg.github.com/wizarrrr
 
     - name: Cleanup
