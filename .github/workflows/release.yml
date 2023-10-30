@@ -1,0 +1,42 @@
+name: Build and Publish to NPM
+
+on:
+  push:
+    branches:
+      - main  # Set a branch name to trigger deployment
+
+permissions:
+  packages: write
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name:  'Automated Version Bump'
+      uses:  'phips28/gh-action-bump-version@master'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14  # You can specify the Node.js version you need
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build package
+      run: npm run build  # Replace with your build command
+
+    - name: Publish to NPM
+      run: |
+        echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > .npmrc
+        npm publish
+
+    - name: Cleanup
+      run: rm .npmrc
