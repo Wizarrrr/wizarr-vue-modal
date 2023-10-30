@@ -1,10 +1,10 @@
 <p align="center"><a href="https://modal.wizarr.dev/" target="_blank" rel="noopener noreferrer"><img height="100" src="https://modal.wizarr.dev/images/logo.svg" alt="Vue logo"></a></p>
 
 <p align="center">
-  <a href="https://img.shields.io/github/issues/wizarrrr/wizarr-modal"><img src="https://img.shields.io/github/issues/wizarrrr/wizarr-modal" alt="Downloads"></a>
+  <a href="https://img.shields.io/github/issues/wizarrrr/wizarr-vue-modal"><img src="https://img.shields.io/github/issues/wizarrrr/wizarr-vue-modal" alt="Downloads"></a>
   <a href="https://img.shields.io/npm/dw/wizarr-vue-modal"><img src="https://img.shields.io/npm/dw/wizarr-vue-modal" alt="Downloads"></a>
-  <a href="https://img.shields.io/github/stars/wizarrrr/wizarr-modal"><img src="https://img.shields.io/github/stars/wizarrrr/wizarr-modal" ></a>
-  <a href="https://github.com/wizarrrr/wizarr-modal/actions/workflows/node.js.yml/badge.svg"><img src="https://github.com/wizarrrr/wizarr-modal/actions/workflows/node.js.yml/badge.svg" alt="Issue"></a>
+  <a href="https://img.shields.io/github/stars/wizarrrr/wizarr-vue-modal"><img src="https://img.shields.io/github/stars/wizarrrr/wizarr-vue-modal" ></a>
+  <a href="https://github.com/wizarrrr/wizarr-vue-modal/actions/workflows/node.js.yml/badge.svg"><img src="https://github.com/wizarrrr/wizarr-vue-modal/actions/workflows/node.js.yml/badge.svg" alt="Issue"></a>
   <a href="https://img.shields.io/npm/l/wizarr-vue-modal"><img src="https://img.shields.io/npm/l/wizarr-vue-modal" alt="Stars"></a>
 </p>
 
@@ -247,4 +247,4 @@ openModal(WidgeTestModal, {
 
 ---
 
-#### Do you like this module? Put a star on [GitHub](https://github.com/wizarrrr/wizarr-modal)
+#### Do you like this module? Put a star on [GitHub](https://github.com/wizarrrr/wizarr-vue-modal)
