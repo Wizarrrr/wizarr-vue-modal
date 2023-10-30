@@ -37,7 +37,7 @@ jobs:
 
     - name: Set package.json name to wizarr-vue-modal
       run: |
-        sed -i 's/"name": ".*"/"name": "wizarr-vue-modal"/' package.json
+        jq '.name = "wizarr-vue-modal"' < package.json > temp.json && mv temp.json package.json
     
     - name: Publish to NPM
       run: |
@@ -46,7 +46,7 @@ jobs:
 
     - name: Set package.json name to @wizarrrr/wizarr-vue-modal
       run: |
-        sed -i 's/"name": ".*"/"name": "@wizarrrr\/wizarr-vue-modal"/' package.json
+        jq '.name = "@wizarrrr/wizarr-vue-modal"' < package.json > temp.json && mv temp.json package.json
 
     - name: Cleanup
       run: rm .npmrc
