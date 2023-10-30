@@ -1,5 +1,4 @@
 # Wizarr Vue Modal
-
 Wizarr vue modal is simple modal system library for **Vue 3** only . 
 
 
