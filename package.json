@@ -1,6 +1,6 @@
 {
   "name": "@wizarrrr/wizarr-vue-modal",
-  "version": "1.12.6",
+  "version": "1.12.7",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
